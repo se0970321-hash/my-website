@@ -5,14 +5,11 @@
 <title>갯고둥 염도 실험</title>
 
 <style>
-
-/* ✅ 폰트 불러오기 */
 @font-face {
     font-family: 'customFont';
     src: url('./font.ttf') format('truetype');
 }
 
-/* 전체 폰트 통일 */
 body {
     margin: 0;
     font-family: 'customFont', sans-serif;
@@ -20,7 +17,6 @@ body {
     text-align: center;
 }
 
-/* 상단 */
 .header {
     display: inline-block;
     background: #f4e7c5;
@@ -31,7 +27,6 @@ body {
     box-shadow: 0 5px 0 #d8c79a;
 }
 
-/* 메인 카드 */
 .container {
     background: #fffaf0;
     border-radius: 25px;
@@ -41,7 +36,6 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* 설명 */
 .desc {
     background: #f8edd3;
     padding: 20px;
@@ -51,9 +45,8 @@ body {
     font-size: 20px;
 }
 
-/* 버튼 */
 .buttons button {
-    font-family: 'customFont', sans-serif; /* ✅ 버튼도 동일 폰트 */
+    font-family: 'customFont', sans-serif;
     margin: 10px;
     padding: 15px 30px;
     border: none;
@@ -62,12 +55,11 @@ body {
     cursor: pointer;
 }
 
-/* 염도 색 */
 .btn-3 { background: #6bb6ff; color: white; }
 .btn-13 { background: #a8e6a3; }
 .btn-33 { background: #4caf50; color: white; }
+.btn-43 { background: #ff7b7b; color: white; } /* 추가 */
 
-/* 영상 */
 video {
     width: 100%;
     max-width: 800px;
@@ -75,7 +67,6 @@ video {
     border-radius: 15px;
 }
 
-/* 표 */
 table {
     margin: 30px auto;
     border-collapse: collapse;
@@ -86,7 +77,7 @@ table {
 }
 
 th, td {
-    font-family: 'customFont', sans-serif; /* ✅ 표도 통일 */
+    font-family: 'customFont', sans-serif;
     padding: 15px 25px;
     border-bottom: 1px solid #ddd;
 }
@@ -95,12 +86,10 @@ th {
     background: #f0d9a7;
 }
 
-/* 결과 */
 .result {
     margin-top: 20px;
     font-size: 24px;
 }
-
 </style>
 </head>
 
@@ -121,6 +110,7 @@ th {
     <button class="btn-3" onclick="changeData(3)">3 PSU</button>
     <button class="btn-13" onclick="changeData(13)">13 PSU</button>
     <button class="btn-33" onclick="changeData(33)">33 PSU</button>
+    <button class="btn-43" onclick="changeData(43)">43 PSU</button>
 </div>
 
 <video id="video" controls>
@@ -166,6 +156,13 @@ const data = {
         stop: "20시간 43분",
         start: "0시간 4초",
         result: "👉 가장 활발"
+    },
+    43: {
+        video: "video43.mp4",
+        move: "30분",
+        stop: "23시간 30분",
+        start: "5분 후",
+        result: "👉 고염 스트레스 상태"
     }
 };
 
